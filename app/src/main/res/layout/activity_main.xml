@@ -94,12 +94,14 @@
         app:layout_constraintTop_toBottomOf="@+id/tinggiEditText">
 
         <RadioButton
+            android:id="@+id/priaRadioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/pria" />
 
         <RadioButton
+            android:id="@+id/wanitaRadioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -114,5 +116,39 @@
         android:text="@string/hitung"
         app:layout_constraintStart_toStartOf="@+id/radioGroup"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <TextView
+        android:id="@+id/bmiTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        tools:text="BMI: 24,09" />
+
+    <TextView
+        android:id="@+id/kategoriTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bmiTextView"
+        tools:text="Kategori: Ideal" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
