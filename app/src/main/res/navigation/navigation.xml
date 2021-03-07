@@ -18,5 +18,13 @@
         android:id="@+id/hitungFragment"
         android:name="com.indraazimi.hitungbmi.ui.HitungFragment"
         android:label="@string/app_name"
-        tools:layout="@layout/fragment_hitung" />
+        tools:layout="@layout/fragment_hitung" >
+        <action
+            android:id="@+id/action_hitungFragment_to_saranFragment"
+            app:destination="@id/saranFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/saranFragment"
+        android:name="com.indraazimi.hitungbmi.ui.SaranFragment"
+        tools:layout="@layout/fragment_saran"/>
 </navigation>

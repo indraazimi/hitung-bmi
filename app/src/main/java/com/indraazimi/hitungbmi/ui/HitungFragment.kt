@@ -16,6 +16,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import com.indraazimi.hitungbmi.R
 import com.indraazimi.hitungbmi.databinding.FragmentHitungBinding
 
@@ -27,6 +28,9 @@ class HitungFragment : Fragment() {
                               savedInstanceState: Bundle?): View? {
         binding = FragmentHitungBinding.inflate(layoutInflater, container, false)
         binding.button.setOnClickListener { hitungBmi() }
+        binding.saranButton.setOnClickListener { view: View ->
+            view.findNavController().navigate(R.id.action_hitungFragment_to_saranFragment)
+        }
         return binding.root
     }
 
@@ -56,6 +60,7 @@ class HitungFragment : Fragment() {
 
         binding.bmiTextView.text = getString(R.string.bmi_x, bmi)
         binding.kategoriTextView.text = getString(R.string.kategori_x, kategori)
+        binding.saranButton.visibility = View.VISIBLE
     }
 
     private fun getKategori(bmi: Float, isMale: Boolean): String {

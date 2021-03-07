@@ -25,6 +25,8 @@
     <string name="berat_invalid">Berat tidak boleh kosong.</string>
     <string name="tinggi_invalid">Tinggi tidak boleh kosong.</string>
     <string name="gender_invalid">Pilih jenis kelamin.</string>
+    <string name="lihat_saran">Lihat Saran</string>
+
     <string name="judul_kurus">Mengatasi Kekurusan</string>
     <string name="judul_ideal">Menjaga Tetap Ideal</string>
     <string name="judul_gemuk">Mengatasi Kegemukan</string>
