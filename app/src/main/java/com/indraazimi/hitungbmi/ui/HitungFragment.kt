@@ -19,17 +19,20 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.indraazimi.hitungbmi.R
 import com.indraazimi.hitungbmi.databinding.FragmentHitungBinding
+import com.indraazimi.hitungbmi.data.KategoriBmi
 
 class HitungFragment : Fragment() {
 
     private lateinit var binding: FragmentHitungBinding
+    private lateinit var kategoriBmi: KategoriBmi
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         binding = FragmentHitungBinding.inflate(layoutInflater, container, false)
         binding.button.setOnClickListener { hitungBmi() }
         binding.saranButton.setOnClickListener { view: View ->
-            view.findNavController().navigate(R.id.action_hitungFragment_to_saranFragment)
+            view.findNavController().navigate(HitungFragmentDirections
+                    .actionHitungFragmentToSaranFragment(kategoriBmi))
         }
         return binding.root
     }
@@ -64,18 +67,24 @@ class HitungFragment : Fragment() {
     }
 
     private fun getKategori(bmi: Float, isMale: Boolean): String {
-        val stringRes = if (isMale) {
+        kategoriBmi = if (isMale) {
             when {
-                bmi < 20.5 -> R.string.kurus
-                bmi >= 27.0 -> R.string.gemuk
-                else -> R.string.ideal
+                bmi < 20.5 -> KategoriBmi.KURUS
+                bmi >= 27.0 -> KategoriBmi.GEMUK
+                else -> KategoriBmi.IDEAL
             }
         } else {
             when {
-                bmi < 18.5 -> R.string.kurus
-                bmi >= 25.0 -> R.string.gemuk
-                else -> R.string.ideal
+                bmi < 18.5 -> KategoriBmi.KURUS
+                bmi >= 25.0 -> KategoriBmi.GEMUK
+                else -> KategoriBmi.IDEAL
             }
+        }
+
+        val stringRes = when (kategoriBmi) {
+            KategoriBmi.KURUS -> R.string.kurus
+            KategoriBmi.IDEAL -> R.string.ideal
+            KategoriBmi.GEMUK -> R.string.gemuk
         }
         return getString(stringRes)
     }

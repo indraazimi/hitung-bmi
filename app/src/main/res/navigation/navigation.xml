@@ -26,5 +26,9 @@
     <fragment
         android:id="@+id/saranFragment"
         android:name="com.indraazimi.hitungbmi.ui.SaranFragment"
-        tools:layout="@layout/fragment_saran"/>
+        tools:layout="@layout/fragment_saran">
+        <argument
+            android:name="kategori"
+            app:argType="com.indraazimi.hitungbmi.data.KategoriBmi" />
+    </fragment>
 </navigation>
