@@ -25,4 +25,10 @@
     <string name="berat_invalid">Berat tidak boleh kosong.</string>
     <string name="tinggi_invalid">Tinggi tidak boleh kosong.</string>
     <string name="gender_invalid">Pilih jenis kelamin.</string>
+    <string name="judul_kurus">Mengatasi Kekurusan</string>
+    <string name="judul_ideal">Menjaga Tetap Ideal</string>
+    <string name="judul_gemuk">Mengatasi Kegemukan</string>
+    <string name="saran_kurus">Cobalah untuk makan porsi besar, seperti burger berukuran raksasa ini.</string>
+    <string name="saran_ideal">Pertahankan gaya hidupmu! Tapi jangan kebanyakan gaya karena itu berbahaya.</string>
+    <string name="saran_gemuk">Cobalah untuk olahraga lari. Kemanapun boleh, asal tidak lari dari kehidupan.</string>
 </resources>
