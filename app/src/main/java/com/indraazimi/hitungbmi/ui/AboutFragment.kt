@@ -1,0 +1,15 @@
+/*
+ * Copyright (c) 2022 Indra Azimi. All rights reserved.
+ *
+ * Dibuat untuk kelas Pemrograman untuk Perangkat Bergerak 1.
+ * Dilarang melakukan penggandaan dan atau komersialisasi,
+ * sebagian atau seluruh bagian, baik cetak maupun elektronik
+ * terhadap project ini tanpa izin pemilik hak cipta.
+ */
+
+package com.indraazimi.hitungbmi.ui
+
+import androidx.fragment.app.Fragment
+import com.indraazimi.hitungbmi.R
+
+class AboutFragment : Fragment(R.layout.fragment_about)
