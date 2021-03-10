@@ -26,6 +26,8 @@
     <string name="tinggi_invalid">Tinggi tidak boleh kosong.</string>
     <string name="gender_invalid">Pilih jenis kelamin.</string>
     <string name="lihat_saran">Lihat Saran</string>
+    <string name="bagikan">Bagikan</string>
+    <string name="bagikan_template">Berat badan: %1$s kg\nTinggi badan: %2$s cm\nJenis kelamin: %3$s\n\n%4$s\n%5$s</string>
 
     <string name="judul_kurus">Mengatasi Kekurusan</string>
     <string name="judul_ideal">Menjaga Tetap Ideal</string>
