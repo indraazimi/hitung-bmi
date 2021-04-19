@@ -7,11 +7,12 @@
  * terhadap project ini tanpa izin pemilik hak cipta.
  */
 
-package com.indraazimi.hitungbmi.ui
+package com.indraazimi.hitungbmi.ui.hitung
 
 import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
+import android.util.Log
 import android.view.*
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -19,6 +20,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.indraazimi.hitungbmi.R
 import com.indraazimi.hitungbmi.databinding.FragmentHitungBinding
+import com.indraazimi.hitungbmi.db.BmiDb
 import com.indraazimi.hitungbmi.model.HasilBmi
 import com.indraazimi.hitungbmi.model.KategoriBmi
 
@@ -27,7 +29,9 @@ class HitungFragment : Fragment() {
     private lateinit var binding: FragmentHitungBinding
 
     private val viewModel: HitungViewModel by lazy {
-        ViewModelProvider(requireActivity())[HitungViewModel::class.java]
+        val db = BmiDb.getInstance(requireContext())
+        val factory = HitungViewModelFactory(db.dao)
+        ViewModelProvider(this, factory)[HitungViewModel::class.java]
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -48,6 +52,10 @@ class HitungFragment : Fragment() {
             findNavController().navigate(HitungFragmentDirections
                 .actionHitungFragmentToSaranFragment(it))
             viewModel.selesaiNavigasi()
+        })
+        viewModel.data.observe(viewLifecycleOwner, {
+            if (it == null) return@observe
+            Log.d("HitungFragment", "Data tersimpan. ID = ${it.id}")
         })
     }
 
