@@ -11,6 +11,7 @@
 buildscript {
     ext.kotlin_version = "1.4.10"
     ext.nav_version = "2.3.3"
+    ext.room_version = "2.2.6"
     repositories {
         google()
         jcenter()
