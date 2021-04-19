@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2022 Indra Azimi. All rights reserved.
+  ~
+  ~ Dibuat untuk kelas Pemrograman untuk Perangkat Bergerak 1.
+  ~ Dilarang melakukan penggandaan dan atau komersialisasi,
+  ~ sebagian atau seluruh bagian, baik cetak maupun elektronik
+  ~ terhadap project ini tanpa izin pemilik hak cipta.
+  -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <solid android:color="@color/ideal" />
+    <size
+        android:width="36dp"
+        android:height="36dp" />
+    <corners android:radius="18dp" />
+</shape>
