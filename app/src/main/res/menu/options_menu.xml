@@ -12,6 +12,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/menu_histori"
+        android:icon="@drawable/ic_baseline_history_24"
+        android:title="@string/histori"
+        app:showAsAction="ifRoom" />
+
+    <item
         android:id="@+id/menu_about"
         android:title="@string/tentang_aplikasi"
         app:showAsAction="never" />
