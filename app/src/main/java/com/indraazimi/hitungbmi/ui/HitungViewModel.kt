@@ -7,7 +7,7 @@
  * terhadap project ini tanpa izin pemilik hak cipta.
  */
 
-package com.indraazimi.hitungbmi
+package com.indraazimi.hitungbmi.ui
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -15,7 +15,7 @@ import androidx.lifecycle.ViewModel
 import com.indraazimi.hitungbmi.model.HasilBmi
 import com.indraazimi.hitungbmi.model.KategoriBmi
 
-class MainViewModel : ViewModel() {
+class HitungViewModel : ViewModel() {
 
     // Hasil BMI bisa null jika pengguna belum menghitung BMI
     private val hasilBmi = MutableLiveData<HasilBmi?>()
