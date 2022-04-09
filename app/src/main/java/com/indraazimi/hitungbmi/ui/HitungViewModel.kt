@@ -20,6 +20,9 @@ class HitungViewModel : ViewModel() {
     // Hasil BMI bisa null jika pengguna belum menghitung BMI
     private val hasilBmi = MutableLiveData<HasilBmi?>()
 
+    // Navigasi akan bernilai null ketika tidak bernavigasi
+    private val navigasi = MutableLiveData<KategoriBmi?>()
+
     fun hitungBmi(berat: Float, tinggi: Float, isMale: Boolean) {
         val tinggiCm = tinggi / 100
         val bmi = berat / (tinggiCm * tinggiCm)
@@ -45,4 +48,14 @@ class HitungViewModel : ViewModel() {
     }
 
     fun getHasilBmi(): LiveData<HasilBmi?> = hasilBmi
+
+    fun mulaiNavigasi() {
+        navigasi.value = hasilBmi.value?.kategori
+    }
+
+    fun selesaiNavigasi() {
+        navigasi.value = null
+    }
+
+    fun getNavigasi() : LiveData<KategoriBmi?> = navigasi
 }
