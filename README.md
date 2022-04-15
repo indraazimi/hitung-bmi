@@ -2,9 +2,9 @@
 
 Aplikasi Android untuk menghitung body mass index (BMI) sehingga pengguna dapat mengetahui apakah berat badannya ideal, gemuk atau kurus.
 
-Tampilan Utama                              | Tampilan Saran                              | Tentang Aplikasi
---------------------------------------------|---------------------------------------------|---------------------------------------------
-<img src="screenshots/main.png" width="200">|<img src="screenshots/saran.png" width="200">|<img src="screenshots/about.png" width="200">
+Tampilan Utama                              | Tampilan Saran                              | Tampilan Histori
+--------------------------------------------|---------------------------------------------|-----------------------------------------------
+<img src="screenshots/main.png" width="200">|<img src="screenshots/saran.png" width="200">|<img src="screenshots/histori.png" width="200">
 
 Punya pertanyaan atau masukan? Silahkan disampaikan melalui issue repository ini.
 
