@@ -1,5 +1,9 @@
 # Hitung BMI
 
+**Repository diarsipkan** karena materi Mobpro 1 mulai Februari 2024 sudah menggunakan Jetpack Compose untuk layout, dan menggunakan studi kasus yang berbeda. Untuk melihat project terbaru, silahkan kunjungi repo [indraazimi/mobpro1-compose](https://github.com/indraazimi/mobpro1-compose) 😊
+
+..
+
 Aplikasi Android untuk menghitung body mass index (BMI) sehingga pengguna dapat mengetahui apakah berat badannya ideal, gemuk atau kurus.
 
 Tampilan Utama                              | Tampilan Saran                              | Tampilan Histori
